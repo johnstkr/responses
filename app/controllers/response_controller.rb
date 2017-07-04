@@ -11,7 +11,8 @@ class ResponseController < ApplicationController
     if @code
       render :status => params[:id]
     else
-      @error = 'Code Not Found'
+      render :status => 404
+      @code = 'Code Not Found'
     end
   end
 end
